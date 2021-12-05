@@ -1,0 +1,25 @@
+ 
+  
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA9c1gLm-Qcvj8hCEnHKpbGe2KfmtGtY-k",
+    authDomain: "kwitter-e54f6.firebaseapp.com",
+    projectId: "kwitter-e54f6",
+    storageBucket: "kwitter-e54f6.appspot.com",
+    messagingSenderId: "475422778979",
+    appId: "1:475422778979:web:3555c009264de263773a56"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+//ADD YOUR FIREBASE LINKS HERE
+
+function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
+       Room_names = childKey;
+      //Start code
+
+      //End code
+      });});}
+getData();
